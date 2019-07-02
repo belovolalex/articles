@@ -34,7 +34,7 @@ export default {
       let tagId = option.id
       this.$store.commit('articles/FILTER_ARTICLES', tagId)
     },
-    handleRemoveOption(option) {
+    handleRemoveOption() {
       this.$store.commit('articles/CHANGE_STATE_FILTERED_ARTICLES', false)    
     }
   }
