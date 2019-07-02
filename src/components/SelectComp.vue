@@ -9,9 +9,7 @@
                   @remove="handleRemoveOption"
                   placeholder="Сортировать по тегу"
                   )
-    
 </template>
-
 
 <script>
 import {mapState} from 'vuex'

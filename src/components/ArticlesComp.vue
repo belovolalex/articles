@@ -7,7 +7,7 @@
                                v-for="item in getCurrentArticles"
                                @click="openArticle(item.id)"
                                :key="item.id"
-                              )
+                               )
           .articles-article
             p.articles-article__title {{ item.title }}
             p.articles-article__description {{ item.description }}

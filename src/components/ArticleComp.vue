@@ -31,6 +31,9 @@ export default {
     let articleId = this.$route.params.id
     this.$store.dispatch('article/fetchArticle', articleId)
   },
+  beforeDestroy() {
+    this.$store.commit('article/REMOVE_ARTICLE')
+  },
   computed: {
     ...mapState('article', [ 'article' ]),
     getAuthorName() {
@@ -50,9 +53,6 @@ export default {
     hideAuthorInfo() {
       this.$modal.hide('author-info');
     }
-  },
-  beforeDestroy() {
-    this.$store.commit('article/REMOVE_ARTICLE')
   }
 }
 </script>
@@ -70,6 +70,10 @@ export default {
   &__description
     letter-spacing 0.4px
     line-height 26px
+  &__author
+    text-align right
+    cursor pointer
+    color $gray
 .article-tags
   margin-left -3px
   &__tag
@@ -81,10 +85,6 @@ export default {
     font-size 0.8rem
     color $gray
     margin 3px
-.article__author
-  text-align right
-  cursor pointer
-  color $gray
 .article-body
   margin-bottom 5px
   +sm()
