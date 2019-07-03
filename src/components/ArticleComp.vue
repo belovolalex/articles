@@ -62,8 +62,7 @@ export default {
 
 <style lang="stylus">
 .article-section
-  +sm()
-    margin-top 30px
+  margin-top 30px
 .article
   &__title
     margin-bottom 35px
