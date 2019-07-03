@@ -33,6 +33,8 @@ export default {
   },
   beforeDestroy() {
     this.$store.commit('article/REMOVE_ARTICLE')
+    this.$store.commit('articles/CLEAR_FILTERED_ARTICLES')
+    this.$store.commit('articles/CHANGE_STATE_FILTERED_ARTICLES', false)
   },
   computed: {
     ...mapState('article', [ 'article' ]),

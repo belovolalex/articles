@@ -27,6 +27,9 @@ export default {
     },
     CHANGE_STATE_FILTERED_ARTICLES(state, payload) {
       state.stateFilterArticles = payload
+    },
+    CLEAR_FILTERED_ARTICLES(state) {
+      state.filteredArticles = []
     }
   },
   
