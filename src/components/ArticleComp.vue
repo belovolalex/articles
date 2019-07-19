@@ -20,7 +20,6 @@
           .article-tags
             span.article-tags__tag(v-for="tag in article.tags") {{ tag.title }}
           .article-to-home-page(@click="toHomePage") На главную
-            
 </template>
 
 

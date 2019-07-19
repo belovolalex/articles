@@ -35,7 +35,7 @@ export default {
       this.$store.commit('articles/FILTER_ARTICLES', tagId)
     },
     handleRemoveOption() {
-      this.$store.commit('articles/CHANGE_STATE_FILTERED_ARTICLES', false)    
+      this.$store.commit('articles/CHANGE_STATE_FILTERED_ARTICLES', false)
     }
   }
 }
